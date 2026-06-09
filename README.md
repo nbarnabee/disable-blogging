@@ -1,8 +1,11 @@
-# Disable Blogging in WordPress ![Version](https://img.shields.io/wordpress/plugin/v/disable-blogging.svg?style=flat-square) ![Downloads](https://img.shields.io/wordpress/plugin/dt/disable-blogging.svg?style=flat-square) ![Rating](https://img.shields.io/wordpress/plugin/r/disable-blogging.svg?style=flat-square)
+# Disable Blogging in WordPress - updated for modern WP & PHP
 ---
 Turn WordPress into a non-blogging CMS platform without code. **Disable Blogging** is a plugin that disables all blog related functionalities on the front-end and back-end. This includes posts, comments, feeds, and so much more. As a result, you will have a cleaner and simpler WordPress platform to be used for static websites.
 
+As many of our client sites have this plugin installed, but the official version of the plugin appears to have been abandoned by its maintainers, I've taken it upon myself to apply various fixes.
+
 ##### Read more on [WordPress](https://wordpress.org/plugins/disable-blogging/)
+
 ---
 
 ### Featured Articles
