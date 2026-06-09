@@ -13,15 +13,16 @@ class Fact_Maven_Disable_Blogging_Settings {
     private $settings_api;
 
     function __construct() {
-        # Call the settings API
-        $this->settings_api = new Fact_Maven_Disable_Blogging_Settings_API;
         # Set and instantiate the class
         add_action( 'admin_init', array( $this, 'admin_init' ), 10, 1 );
         # Create the plugin's settings page
         add_action( 'admin_menu', array( $this, 'admin_menu' ), 10, 1 );
     }
 
+
     function admin_init() {
+		# Call the settings API
+	    $this->settings_api = new Fact_Maven_Disable_Blogging_Settings_API;
         # Setting sections
         $this->settings_api->set_sections( $this->get_settings_sections() );
         # Setting fields in each section

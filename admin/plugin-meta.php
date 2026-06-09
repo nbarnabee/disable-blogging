@@ -11,7 +11,7 @@ class Fact_Maven_Disable_Blogging {
 
     public function __construct() {
         # Handle localization
-        add_action( 'plugins_loaded', array( $this, 'i18n' ), 0, 1 );
+        add_action( 'init', array( $this, 'i18n' ));
         # Add meta links to plugin page
         add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
         # Add link to plugin settings
@@ -20,7 +20,7 @@ class Fact_Maven_Disable_Blogging {
 
     public function i18n() {
         # Load the translations
-        load_plugin_textdomain( 'dsbl', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain( 'dsbl', false, dirname(plugin_basename( dirname( __FILE__ ) )). '/languages/' );
     }
 
     public function plugin_row_meta( $links, $file ) {
