@@ -301,13 +301,12 @@ class Fact_Maven_Disable_Blogging_General {
         update_option( 'default_comment_status', 0 );
         # 'Comment must be manually approved' (checked)
         update_option( 'comment_moderation', 1 );
-                # 'Comment author must have a previously approved comment' (checked)
-                if ( compatible() ) {
-                    update_option( 'comment_previously_approved', 1 );
-                }
-                else {
-                    update_option( 'comment_whitelist', 1 ); # deprecated since WP 5.5.0
-                }
+		# 'Comment author must have a previously approved comment' (checked)
+		if ( version_compare( get_bloginfo( 'version' ), '5.5', '>=' ) ) {
+			update_option( 'comment_previously_approved', 1 );
+		} else {
+			update_option( 'comment_whitelist', 1 ); # deprecated since WP 5.5.0
+		}
     }
 
     public function existing_comments( $comments ) {
